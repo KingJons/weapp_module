@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/star/star",
     "pages/tabber/tabber",
     "pages/scroll/scroll",
     "pages/tab/tab",
