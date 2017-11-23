@@ -1,0 +1,34 @@
+<!--pages/tabber/tabber.wxml-->
+<scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">全部</view>
+  <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">营销系统</view>
+  <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">家居建材</view>
+  <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">美妆护肤</view>
+  <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">数码电器</view>
+  <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">母婴玩具</view>
+  <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">零元购活动</view>
+</scroll-view>
+<swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab">
+  <swiper-item wx:for="{{[0,1,2,3,4,5,6]}}" wx:key="index">
+    <scroll-view scroll-y="true" class="scoll-h">
+      <block wx:for="{{[1,2,3,4,5,6,7]}}" wx:key="index">
+        <view class='goods-Wrapper'>
+          <image mode='widthFix' class="goods-img" src='https://avatars2.githubusercontent.com/u/32173521?s=460&v=4'></image>
+          <view class="goods-info">
+            <view>周边团门店微营销系统年费</view>
+            <view>
+              <text class='price'>¥298.00</text> 
+              <text class='line-delete'>
+                ¥298.00
+              </text>
+              <label>
+                <button><image mode='widthFix' src='../../images/icon1.png'></image>1人团</button>
+                <button><image mode='widthFix' src='../../images/icon2.png'></image>去开团</button>
+              </label>
+            </view>
+          </view>              
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

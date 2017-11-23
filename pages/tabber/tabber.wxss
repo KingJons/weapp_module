@@ -1,0 +1,48 @@
+/* pages/tabber/tabber.wxss */
+.tab-h {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background-color: #f7f7f7;
+  font-size: 28rpx;
+  /* 直到遇到br才换行 */
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:99;
+}
+.tab-item {
+  margin: 0 36rpx;
+  display: inline-block;
+}
+
+.tab-item.active {
+  color:#4675f9;
+  position: relative;
+}
+
+.tab-h .tab-item.active:after {
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 115rpx;
+  background: #4675f9;
+  position: absolute;
+  bottom: 0;
+  left: 5rpx;
+  border-radius: 16rpx;
+}
+
+.tab-h .tab-item:nth-child(1).active:after {
+  width: 52rpx;
+}
+.tab-content {
+  margin-top: 80rpx;
+  height: 500rpx;
+}
+.goods-img {
+  width: 100rpx;
+}
