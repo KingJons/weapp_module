@@ -1,1 +1,53 @@
-/* pages/star/star.wxss */
+page {
+  background: #f5f5f5;
+}
+.accessWrapper {
+  background:#fff;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.accessWrapper textarea {
+  width: 94%;
+  margin:0 auto;
+  max-height: 200px;
+  border-top: 1px solid #f5f5f5;
+  padding: 10px 0px;
+}
+.accessWrapper .title {
+  padding: 10px;
+}
+.starsWrapper {
+  position: absolute;
+  top: -20px;
+  right: 135px;
+}
+.star-image {
+  position: absolute;
+  top: 50rpx;
+  height: 50rpx;
+  width: 50rpx;
+  src: "../../images/normal.png";
+}
+.item {
+  position: absolute;
+  top: 0rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.uploadFile{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #f5f5f5;
+  color: #999;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.save-edit {
+  width: 80%;
+  margin-top:40rpx;
+  background-color:green;
+  color:white;
+}
