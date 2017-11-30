@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/storage_pre/storage_pre",
+    "pages/storage/storage",
+    "pages/tabber/tabber",
     "pages/info/info",
     "pages/star/star",
-    "pages/tabber/tabber",
     "pages/scroll/scroll",
     "pages/tab/tab",
     "pages/index/index",

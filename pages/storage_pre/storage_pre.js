@@ -1,64 +1,48 @@
-// pages/storage/storage.js
+// pages/storage_pre/storage_pre.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    address: ""
+    address: '没有地址'
   },
-  bindAddressInput: function (e) {
-    this.setData({
-      address: e.detail.value
+  gotoStorage: function() {
+    wx.navigateTo({
+      url: '../storage/storage'
     });
   },
-  bindClearAddress: function() {
-    wx.clearStorage();
-    this.setData({
-      address: ''
-    });
-  },
-  bindSaveAddress: function () {
-    wx.setStorage({
-      key: "address",
-      data: this.data.address,
-      success: function() {
-        wx.showToast({
-          title: '保存成功',
-          icon: 'success',
-          duration: 2000
-        })
-      }
-    });
-  },
-  /**
+  /** 
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.getStorage({
-      key: 'address',
-      success: function(res) {
-        console.log(res);
-        that.setData({
-          'address': res.data
-        })
-      }
-    })
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // 每次显示都会有
+    var that = this;
+    wx.getStorage({
+      key: 'address',
+      success: function(data) {
+        console.log(data);
+        that.setData(
+          {
+            address: data.data
+          }
+        )
+      }
+    })
   },
 
   /**

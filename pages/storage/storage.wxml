@@ -1,2 +1,11 @@
-<!--pages/storage/storage.wxml-->
-<text>pages/storage/storage.wxml</text>
+<view>
+  <input placeholder="请输入您的地址" 
+  bindinput="bindAddressInput"
+  value="{{address}}"/>
+  <view>
+    <button bindtap="bindSaveAddress">保存</button>
+  </view>
+  <view>
+    <button bindtap="bindClearAddress">清空</button>
+  </view>
+</view>
